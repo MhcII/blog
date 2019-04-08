@@ -3,13 +3,13 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
+title: MhcII
 subtitle:
 description:
-keywords:
-author: John Doe
-language:
-timezone:
+keywords: 全干工程师, 面向工资编程
+author: MhcII
+language: zh-CN
+timezone: Asia/Shanghai
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
@@ -35,7 +35,7 @@ titlecase: false # Transform title into titlecase
 external_link: true # Open external links in new tab
 filename_case: 0
 render_drafts: false
-post_asset_folder: false
+post_asset_folder: true
 relative_link: false
 future: true
 highlight:
@@ -73,82 +73,34 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: minos
+theme: Hacker
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type:
 
-# 以下是 minos 的配置
+# 以下是 themes/Hacker 的配置
 
-# Website's icon url.
-favicon: /favicon.png
-
-# Open Graph metadata (https://hexo.io/docs/helpers.html#open-graph)
-open_graph:
-  twitter_id:
-  twitter_site:
-  google_plus:
-  fb_admins:
-  fb_app_id:
-
-# Website's logo shown on the left of the navigation bar.
-# It can either be an url to an image or a string if the following option is set.
-# logo:
-#   text: <logo string>
-logo:
-
-article:
-  # Show word count and estimated reading time.
-  readtime: true
-  # Code highlight theme, please see https://highlightjs.org/static/demo/
-  highlight: atom-one-light
-
-# Navigation bar menu links.
 menu:
+  Home: /
   Archives: /archives
-  Lifestyle: /categories/LifeStyle
-  Music: /categories/Music
-  Technology: /categories/Technology
-  About: /about
 
-# Search plugin settings.
-search:
-  type: insight
+# gitment
+gitment: true
+gitment_owner: MhcII
+gitment_repo: blog
+gitment_client_id: 5f79daaaf31979d975a6
+gitment_client_secret: 0de79f328dbb018829d28a9a2d2e0171d817bf12
 
-# Navigation bar toc settings
-toc: false
+# valine comment
+valine: false
+leancloud_id:
+leancloud_key:
 
-# Share plugin settings.
-share:
-  type: sharethis
-  install_url:
+# disqus comment
+disqus: false
+disqus_shortname:
 
-# Comment plugin settings.
-comment:
-  type: disqus
-  shortname:
-
-# Other plugins and their settings.
-plugins:
-  mathjax: true
-  katex: false
-  gallery: true
-  clipboard: true
-  google-analytics:
-    tracking_id:
-
-# Additional navigation bar links on the right.
-# Links can either be text or icon. The following link is set to be an icon link whose icon
-# is set to the class name of a FontAwesome 5 icon. The `footer_links` below also gives an
-# example of setting plain text links.
-navbar_links:
-  GitHub:
-    icon: fab fa-github
-    url: https://github.com/ppoffice/hexo-theme-minos
-
-# Links at the bottom of the page.
-footer_links:
-  GitHub: https://github.com/ppoffice/hexo-theme-minos
-
+# google analytics
+googleTrackId: UA-137828987-1
