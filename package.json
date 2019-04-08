@@ -7,7 +7,7 @@
   },
   "scripts": {
     "serve": "hexo server",
-    "build": "hexo g"
+    "build": "hexo clean && hexo g"
   },
   "dependencies": {
     "hexo": "^3.8.0",
