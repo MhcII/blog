@@ -7,7 +7,8 @@
   },
   "scripts": {
     "serve": "hexo s",
-    "build": "hexo clean && hexo g"
+    "build": "hexo clean && hexo g",
+    "deploy:firebase": "firebase deploy --only hosting"
   },
   "dependencies": {
     "hexo": "^3.8.0",
