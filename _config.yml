@@ -146,7 +146,11 @@ search:
 # http://ppoffice.github.io/hexo-theme-icarus/categories/Configuration/Comment-Plugins
 comment:
   # Name of the comment plugin
-  type:
+  type: gitment
+  owner: MhcII         # (required) GitHub user name
+  repo: blog          # (required) GitHub repository name
+  client_id: 5f79daaaf31979d975a6     # (required) OAuth application client id
+  client_secret: 0de79f328dbb018829d28a9a2d2e0171d817bf12 # (required) OAuth application client secret
 # Share plugin settings
 # http://ppoffice.github.io/hexo-theme-icarus/categories/Configuration/Share-Plugins
 share:
