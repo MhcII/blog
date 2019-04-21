@@ -109,7 +109,7 @@ navbar:
     博客: /archives
     分类: /categories
     标签: /tags
-    关于: /about
+    关于: /1992/10/14/about
   # Navigation bar links to be shown on the right
   links:
     Download on GitHub:
@@ -195,7 +195,7 @@ widgets:
     social_links:
       Github:
         icon: fab fa-github
-        url: 'http://github.com/ppoffice'
+        url: 'https://github.com/MhcII'
       Facebook:
         icon: fab fa-facebook
         url: 'http://facebook.com'
