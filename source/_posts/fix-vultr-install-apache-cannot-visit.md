@@ -1,10 +1,11 @@
 ---
-title: 解决Vultr Ubuntu16.04.1 装 Apache 后外网无法访问
-date: 2019-04-08 11:44:10
+title: 解决 Vultr Ubuntu 16.04.1 装 Apache 后外网无法访问
+date: 2016-09-24 18:44:00
 tags:
 ---
 
 # 发现问题
+
 前一段时间在 Vultr 的 VPS 上装了 Apache 后，发现无法访问。想到以下几种可能
 
 - Apache 没有安装成功
@@ -19,21 +20,20 @@ tags:
 
   ping 服务器的 IP 地址，可以 ping 通。排除
 
-- 防火墙隔离了 80 端口
+- 防火墙隔离了80端口
 
-  使用 [端口扫描](http://tool.chinaz.com/port/) 查看服务器的端口是否开放，发现 80 端口确实是关闭状态，应该是防火墙或者 Vultr 的网络服务问题。
+  使用 [端口扫描](https://link.jianshu.com/?t=http://tool.chinaz.com/port/) 查看服务器的端口是否开放，发现 80 端口确实是关闭状态，应该是防火墙或者 Vultr 的网络服务问题。
+  查询 Vultr 的文档，[Install Wordpress with Apache, PH......](https://link.jianshu.com/?t=https://www.vultr.com/docs/install-wordpress-with-apache-php-and-mysql-automated-startup-script) 。发现其中有如下一段。
 
-  查询 Vultr 的文档，[Install Wordpress with Apache, PHP and MySQL (Automated Startup Script)](https://www.vultr.com/docs/install-wordpress-with-apache-php-and-mysql-automated-startup-script)。发现其中有如下一段。
+  ![](./3120472-d6600678e8c07999.png)
 
-  ![](3120472-d6600678e8c07999.png)
-
-  找到原因了，确实是防火墙没有开放80端口
+  找到原因了，确实是防火墙没有开放 80 端口
 
 # 解决
 
 按照文档输入了如下配置
 
-```shell
+```
 iptables -F
 iptables -A INPUT -i lo -j ACCEPT
 iptables -A INPUT -p tcp -m tcp --dport 22 -j ACCEPT
@@ -46,7 +46,6 @@ iptables -A INPUT -p tcp -m tcp --dport 8000 -j ACCEPT
 
 ***
 
-> 原文地址：[解决Vultr Ubuntu16.04.1 装 Apache 后外网无法访问](https://blog.mhcii.cn/blog/develop/fix-vultr-install-apache-cannot-visit.html)
+> 原文地址：[解决 Vultr Ubuntu 16.04.1 装 Apache 后外网无法访问](https://www.jianshu.com/p/09fb9380f738)
 >
 > 转载请注明出处
-
